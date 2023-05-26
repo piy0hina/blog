@@ -9,6 +9,7 @@ class PostController extends Controller
 {
     public function index(Post $post)
     {
-        return $post->get();
+        //limit_countでpaginateされたメソッドの呼び出し
+        return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
     }
 }

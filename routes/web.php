@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//Controllerとの接続
 use App\Http\Controllers\PostController;
 
 /*
@@ -13,9 +14,12 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
+//Bladeファイルの直接表示
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return view('posts/index');
 });
-
-Route::get('/posts', [PostController::class, 'index']);
+*/
+//ルーティングの設定 PostControllerを呼び出し、indexを返す
+Route::get('/', [PostController::class, 'index']);
