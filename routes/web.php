@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//Controllerとの接続
 use App\Http\Controllers\PostController;
 
 /*
@@ -14,9 +15,11 @@ use App\Http\Controllers\PostController;
 |
 */
 /*
+//Bladeファイルの直接表示
 Route::get('/', function () {
     //return view('welcome');
     return view('posts/index');
 });
 */
+//ルーティングの設定 PostControllerを呼び出し、indexを返す
 Route::get('/', [PostController::class, 'index']);
