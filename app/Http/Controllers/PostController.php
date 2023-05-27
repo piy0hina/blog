@@ -12,4 +12,9 @@ class PostController extends Controller
         //limit_countでpaginateされたメソッドの呼び出し
         return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
     }
+    public function show(Post $post)
+    {
+        //任意idのpostインスタンスをpost変数に格納
+        return view('posts.show')->with(['post' => $post]);
+    }
 }
