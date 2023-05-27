@@ -10,18 +10,24 @@
     </head>
     <body>
         <h1>Blog Name</h1>
-        <div class='posts'>
+        
+        <div class="create">
+            <a href="/posts/create">投稿する</a>
+        </div>
+        
+        <div class="posts">
             <!-- foreachで、postsから取ってきたDBの情報を取り出し、件数に達するまで下を繰り返す -->
             @foreach($posts as $post)
-            <div class='report'>
-                <h2 class='title'>
+            <div class="report">
+                <h2 class="title">
                     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                 </h2>
             </div>
             <!-- ここまでを繰り返し、件数に達したら、繰り返しを終了する -->
             @endforeach
         </div>
-        <div class='paginate'>
+        
+        <div class="paginate">
             {{ $posts->links() }}
         </div>
     </body>

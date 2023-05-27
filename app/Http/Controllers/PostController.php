@@ -17,4 +17,8 @@ class PostController extends Controller
         //任意idのpostインスタンスをpost変数に格納
         return view('posts.show')->with(['post' => $post]);
     }
+    public function create(Post $post)
+    {
+        return view('posts/create');
+    }
 }

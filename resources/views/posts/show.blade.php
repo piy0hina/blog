@@ -16,8 +16,8 @@
             <h3>本文</h3>
             <p class='body'>{{ $post->body }}</p>    
         </div>
-        <div class='footer'>
-            <a href='/'>⇐ Blog Listへ戻る</a>
+        <div class="footer">
+            <a href="/">⇐ Blog Listへ戻る</a>
         </div>
     </body>
 </html>
