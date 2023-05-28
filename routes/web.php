@@ -24,6 +24,8 @@ Route::get('/', function () {
 //ルーティングの設定 PostControllerを呼び出し、indexを返す
 Route::get('/', [PostController::class, 'index']);
 
+Route::post('/posts', [PostController::class, 'store']);
+
 // /posts/createにGetリクエストが来たら、PostControllerのcreateメソッドを実行する
 Route::get('/posts/create', [PostController::class, 'create']);
 // /posts/~のGetリクエストを判定するルーティングは、下のルーティングによりも上に書かないと、ルートパラメーター部分に情報として入ってしまう
