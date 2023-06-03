@@ -22,6 +22,7 @@ class Post extends Model
     }
     
     protected $fillable = [
+        //fillが可能なプロパティをここに記入
         'title',
         'body',
     ];

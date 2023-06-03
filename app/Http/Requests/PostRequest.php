@@ -24,6 +24,7 @@ class PostRequest extends FormRequest
      */
     public function rules()
     {
+        //バリデーション(入力の際に必要な要件項目はここに記入する)
         return [
             'post.title' => 'required|string|max:100',
             'post.body' => 'required|string|max:4000',

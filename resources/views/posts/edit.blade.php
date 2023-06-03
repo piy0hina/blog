@@ -13,17 +13,18 @@
         
         <form action="/posts/{{ $post->id }}" method="POST">
             @csrf
+            <!-- PUTリクエストとしてデータを送信する -->
             @method('PUT')
             
             <div class="title">
                 <h2>タイトルを入力してください</h2>
-                <input type="text" name="post[title]" value="{{ $post->title }}"/>
+                <input type="text" name="post[title]" placeholder="タイトル" value="{{ $post->title }}"/>
                 
             </div>
             
             <div class="body">
                 <h2>本文を入力してください</h2>
-                <textarea name="post[body]" >{{ $post->body }}</textarea>
+                <textarea name="post[body]" placeholder="本文" >{{ $post->body }}</textarea>
                 
             </div>
             
