@@ -26,6 +26,7 @@ class PostRequest extends FormRequest
     {
         //バリデーション(入力の際に必要な要件項目はここに記入する)
         return [
+            //required:入力必須, string:文字列, max:最大文字数, 
             'post.title' => 'required|string|max:100',
             'post.body' => 'required|string|max:4000',
         ];
