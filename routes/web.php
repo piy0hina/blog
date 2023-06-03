@@ -28,7 +28,13 @@ Route::post('/posts', [PostController::class, 'store']);
 
 // /posts/createにGetリクエストが来たら、PostControllerのcreateメソッドを実行する
 Route::get('/posts/create', [PostController::class, 'create']);
+
+
+
 // /posts/~のGetリクエストを判定するルーティングは、下のルーティングによりも上に書かないと、ルートパラメーター部分に情報として入ってしまう
 
 // '/posts/{ルートパラメーター}'にGetリクエストが来たら、PostControllerのshowメソッドを実行する
 Route::get('/posts/{post}', [PostController::class, 'show']);
+
+Route::get('/posts/{post}/edit', [PostController::class, 'edit']);
+Route::put('/posts/{post}', [PostController::class, 'update']);
